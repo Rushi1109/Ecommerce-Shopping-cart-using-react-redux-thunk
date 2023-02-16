@@ -1,25 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/e-commerce/navbar/Navbar';
+import ProdcutList from './components/e-commerce/productList/ProdcutList';
+// import Child1 from './components/Child1';
+// import Child2 from './components/Child2';
+// import CreateNote from './components/notes/CreateNote';
+// import ListNote from './components/notes/ListNote';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <>
+            <div className="App">
+                {/* <Child1 />
+                <Child2 /> */}
+                {/* <CreateNote /> */}
+                {/* <ListNote /> */}
+
+                <Navbar />
+                <ProdcutList />
+            </div>
+        </>
+    );
 }
 
 export default App;
