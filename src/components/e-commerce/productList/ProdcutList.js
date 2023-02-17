@@ -1,23 +1,25 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { loadProducts } from '../../../redux/slices/productSlice';
+import { fetchData } from '../../../redux/slices/productSlice';
+// import { AiOutlineLoading3Quarters } from 'react-icons/ai'
 import Product from '../product/Product';
+import { LoadingOutlined } from '@ant-design/icons';
+import { Spin } from 'antd';
 import './ProductList.css';
 
 function ProdcutList() {
 
     const dispatch = useDispatch();
     const products = useSelector(state => state.productReducer.products);
+    const status = useSelector(state => state.productReducer.status);
 
     useEffect(() => {
-        fetchData();
+        dispatch(fetchData());
     }, []);
 
-    async function fetchData() {
-        const response = await fetch(`https://api.escuelajs.co/api/v1/products`);
-        const data = await response.json();
-        // console.log(data);
-        dispatch(loadProducts(data));
+    if(status === 'loading'){
+        const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
+        return <Spin style={{position: 'absolute', top: '40%', left: '50%'}} indicator={antIcon} />
     }
 
     return (
