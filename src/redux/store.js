@@ -9,6 +9,6 @@ export default configureStore({
         // messageReducer,
         // notesReducer: notesSlice,           // Both are same
         productReducer,
-        cartReducer
+        cartReducer,
     }
 });

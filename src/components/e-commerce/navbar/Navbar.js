@@ -2,6 +2,7 @@ import React from 'react'
 import { AiOutlineShoppingCart } from 'react-icons/ai'
 import { useSelector } from 'react-redux'
 import './Navbar.css'
+import { Link } from 'react-router-dom'
 
 function Navbar() {
 
@@ -13,10 +14,10 @@ function Navbar() {
 
     return (
         <nav>
-            <h2 className="banner">My Shop</h2>
+            <Link to="/"><h2 className="banner">My Shop</h2></Link>
             <div className="right-layout">
                 <div className="cart-layout">
-                    <AiOutlineShoppingCart />
+                    <Link to="/checkout"><AiOutlineShoppingCart className='cart' /></Link>
                     <h3>{itemCount}</h3>
                 </div>
             </div>

@@ -18,9 +18,9 @@ function Product({ product }) {
                 <p className='productPrice'>${product.price}</p>
             </div>
             <div className="cartInfo">
-                <button className='button' onClick={() => dispatch(removeFromCart(product.id))}>-</button>
+                <button className='bttn' onClick={() => dispatch(removeFromCart(product.id))}>-</button>
                 <h4>{curQuantity}</h4>
-                <button className='button' onClick={() => dispatch(addToCart(product.id))}>+</button>
+                <button className='bttn' onClick={() => dispatch(addToCart(product))}>+</button>
             </div>
         </div>
     );
