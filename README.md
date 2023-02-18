@@ -7,3 +7,4 @@ An async thunk is created for the async fetch operation.
 
 The number follwed by shopping cart displays the count of total products selected.
 
+Here's the link for preview: https://e-commerce-shopping-cart-with-redux.netlify.app/
